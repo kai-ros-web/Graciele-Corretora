@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graciele Moraes | Corretora de Imóveis em Itapeva - SP</title>
+    <meta
+      name="description"
+      content="Compra, venda, locação e avaliação de imóveis em Itapeva e região, com acompanhamento próximo e conhecimento técnico em cada etapa. Fale agora pelo WhatsApp."
+    />
+    <meta name="theme-color" content="#3B302B" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Graciele Moraes | Corretora de Imóveis"
+    />
+    <meta
+      property="og:description"
+      content="Mais que imóveis, escolhas que transformam vidas e constroem histórias. Atendimento em Itapeva e região."
+    />
+    <meta property="og:image" content="assets/images/og-capa.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a
+          href="#inicio"
+          class="logo"
+          aria-label="Graciele Moraes - Página inicial"
+        >
+          <img
+            src="assets/images/logo.png"
+            alt="Graciele Moraes Corretora de Imóveis"
+            class="logo__img"
+            onerror="this.closest('.logo').classList.add('is-placeholder')"
+          />
+          <span class="logo__placeholder" aria-hidden="true">
+            <span class="logo__monogram">GM</span>
+            <span class="logo__text">
+              <span class="logo__name">Graciele Moraes</span>
+              <span class="logo__role">Corretora de Imóveis</span>
+            </span>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Navegação principal">
+          <ul class="nav__list">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#imoveis">Imóveis</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <a href="#contato" class="btn btn--primary btn--sm header__cta">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+          </a>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Abrir menu"
+          >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu (fica fora do <header> de propósito: o header usa backdrop-filter,
+     que faz elementos com position:fixed dentro dele se posicionarem em relação
+     ao header — não à tela inteira. Por isso o menu precisa estar aqui fora.) -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#imoveis">Imóveis</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">Dúvidas frequentes</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="https://wa.me/5515997238982" class="btn btn--primary btn--block">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <span>Falar no WhatsApp</span>
+      </a>
+    </div>
+
+    <main id="conteudo-principal">
+      <section class="hero" id="inicio">
+        <div
+          class="hero__bg"
+          style="--hero-image: url(&quot;assets/images/hero.jpg&quot;)"
+        ></div>
+        <div class="hero__overlay"></div>
+
+        <div class="container hero__content">
+          <p class="hero__kicker">Corretora de imóveis · Itapeva e região</p>
+          <h1 class="hero__title">
+            O imóvel certo muda a direção da sua história.
+          </h1>
+          <p class="hero__subtitle">
+            Acompanhamento próximo, conhecimento técnico e atenção a cada
+            detalhe — da primeira visita até as chaves na mão.
+          </p>
+          <div class="hero__actions">
+            <a
+              href="https://wa.me/5515997238982"
+              class="btn btn--whatsapp btn--lg"
+            >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <span>Falar com a Graciele</span>
+            </a>
+            <a href="#imoveis" class="btn btn--outline-light btn--lg">
+              <span>Ver imóveis disponíveis</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="#confianca" class="hero__scroll" aria-label="Rolar para baixo">
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="trust" id="confianca" aria-label="Números em destaque">
+        <div class="container trust__grid">
+          <div class="trust__item">
+            <i class="fa-solid fa-key" aria-hidden="true"></i>
+            <span class="trust__number" data-count="120">0</span>
+            <span class="trust__label">negócios realizados</span>
+          </div>
+          <div class="trust__item">
+            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+            <span class="trust__number" data-count="8">0</span>
+            <span class="trust__label">anos de experiência</span>
+          </div>
+          <div class="trust__item">
+            <i class="fa-solid fa-face-smile" aria-hidden="true"></i>
+            <span class="trust__number" data-count="98">0</span>
+            <span class="trust__label">% de clientes satisfeitos</span>
+          </div>
+          <div class="trust__item">
+            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+            <span class="trust__number" data-count="15">0</span>
+            <span class="trust__label">cidades atendidas</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="sobre">
+        <div class="container about__grid">
+          <div class="about__photo">
+            <img
+              src="assets/images/graciele-foto.jpg"
+              alt="Graciele Moraes, corretora de imóveis"
+              onerror="
+                this.closest('.about__photo').classList.add('is-placeholder')
+              "
+            />
+            <div class="about__photo-placeholder" aria-hidden="true">
+              <i class="fa-solid fa-user-tie"></i>
+              <span>Foto da Graciele</span>
+            </div>
+            <div class="about__badge">
+              <i class="fa-solid fa-award" aria-hidden="true"></i>
+              <span>CRECI/SP 326640-F</span>
+            </div>
+          </div>
+
+          <div class="about__content">
+            <p class="section-kicker">Sobre</p>
+            <h2 class="section-title">
+              Uma corretora que entende de imóveis <em>e</em> de pessoas.
+            </h2>
+            <p class="about__text">
+              Com formação próxima da arquitetura e da construção, a Graciele
+              une o olhar técnico sobre estrutura, documentação e potencial de
+              valorização a um atendimento verdadeiramente humano. O resultado é
+              um processo de compra, venda ou locação mais seguro, mais claro e
+              muito menos estressante para você.
+            </p>
+            <p class="about__text">
+              Cada cliente recebe atenção individual: entender o momento de
+              vida, o orçamento real e o que faz sentido a longo prazo, antes de
+              indicar qualquer imóvel.
+            </p>
+
+            <ul class="tag-list" aria-label="Características do atendimento">
+              <li>
+                <i class="fa-solid fa-gem" aria-hidden="true"></i>Elegante
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-house-chimney-window"
+                  aria-hidden="true"
+                ></i
+                >Acolhedora
+              </li>
+              <li>
+                <i class="fa-solid fa-drafting-compass" aria-hidden="true"></i
+                >Técnica
+              </li>
+              <li>
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>Feminina
+              </li>
+              <li>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>Contemporânea
+              </li>
+            </ul>
+
+            <blockquote class="about__quote">
+              "Mais que imóveis, realizo escolhas que transformam vidas e
+              constroem histórias."
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="servicos">
+        <div class="container">
+          <div class="section-head">
+            <p class="section-kicker">Serviços</p>
+            <h2 class="section-title">Como posso ajudar você</h2>
+            <p class="section-subtitle">
+              Um atendimento completo, do primeiro contato à assinatura do
+              contrato.
+            </p>
+          </div>
+
+          <div class="services__grid">
+            <article class="service-card">
+              <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+              <h3>Compra de imóveis</h3>
+              <p>
+                Seleção de opções alinhadas ao seu orçamento e estilo de vida,
+                com visitas acompanhadas e negociação até o fechamento.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
+              <h3>Venda de imóveis</h3>
+              <p>
+                Estratégia de divulgação, fotos, anúncios e curadoria de
+                propostas para vender pelo melhor valor possível.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fa-solid fa-key" aria-hidden="true"></i>
+              <h3>Locação</h3>
+              <p>
+                Intermediação de aluguel para proprietários e inquilinos, com
+                contrato seguro e transparente para as duas partes.
+              </p>
+            </article>
+            <article class="service-card">
+              <i
+                class="fa-solid fa-magnifying-glass-dollar"
+                aria-hidden="true"
+              ></i>
+              <h3>Avaliação de imóveis</h3>
+              <p>
+                Análise técnica de mercado para você saber o real valor do seu
+                imóvel antes de anunciar ou negociar.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fa-solid fa-tree" aria-hidden="true"></i>
+              <h3>Terrenos e loteamentos</h3>
+              <p>
+                Orientação sobre documentação, potencial construtivo e
+                localização para quem vai construir do zero.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+              <h3>Consultoria e financiamento</h3>
+              <p>
+                Apoio no entendimento de documentação, financiamento e etapas do
+                processo, sem juridiquês.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="properties" id="imoveis">
+        <div class="container">
+          <div class="section-head">
+            <p class="section-kicker">Imóveis</p>
+            <h2 class="section-title">Destaques da carteira</h2>
+            <p class="section-subtitle">
+              Uma amostra do que está disponível agora. Fale comigo para ver a
+              lista completa.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="properties__scroller"
+          id="propertiesGrid"
+          aria-label="Lista de imóveis em destaque"
+        ></div>
+
+        <div class="container properties__footer">
+          <a href="imoveis.html" rel="noopener" class="btn btn--outline">
+            <span>Quero ver todos os imóveis</span>
+            <i
+              class="fa-solid fa-arrow-up-right-from-square"
+              aria-hidden="true"
+            ></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="diferenciais" id="diferenciais">
+        <div class="container">
+          <div class="section-head section-head--light">
+            <p class="section-kicker">Por que trabalhar comigo</p>
+            <h2 class="section-title">Diferenciais no atendimento</h2>
+          </div>
+
+          <ul class="diferenciais__list">
+            <li>
+              <i class="fa-solid fa-drafting-compass" aria-hidden="true"></i>
+              <div>
+                <h3>Conhecimento técnico</h3>
+                <p>
+                  Vivência próxima da arquitetura e da construção, para avaliar
+                  estrutura, documentação e potencial real de cada imóvel.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-people-arrows" aria-hidden="true"></i>
+              <div>
+                <h3>Atendimento próximo</h3>
+                <p>
+                  Acompanhamento pessoal em cada etapa, da primeira conversa à
+                  entrega das chaves — sem deixar você sem resposta.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+              <div>
+                <h3>Ética e transparência</h3>
+                <p>
+                  Negociações claras e informação completa, para você decidir
+                  com segurança, sem letras miúdas.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <div>
+                <h3>Atenção aos detalhes</h3>
+                <p>
+                  Cada imóvel é analisado com cuidado: localização,
+                  documentação, potencial de valorização e preço justo.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-house-circle-check" aria-hidden="true"></i>
+              <div>
+                <h3>Resultados que geram realizações</h3>
+                <p>
+                  Mais do que fechar contratos, o objetivo é conectar você ao
+                  lugar certo para viver ou investir.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="testimonials" id="depoimentos">
+        <div class="container">
+          <div class="section-head">
+            <p class="section-kicker">Depoimentos</p>
+            <h2 class="section-title">Quem já fechou negócio</h2>
+          </div>
+
+          <div class="testimonial-carousel" id="testimonialCarousel">
+            <div
+              class="testimonial-carousel__track"
+              id="testimonialTrack"
+            ></div>
+
+            <div class="testimonial-carousel__controls">
+              <button
+                class="carousel-btn"
+                id="prevTestimonial"
+                aria-label="Depoimento anterior"
+              >
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              </button>
+              <div
+                class="testimonial-carousel__dots"
+                id="testimonialDots"
+                role="tablist"
+                aria-label="Selecionar depoimento"
+              ></div>
+              <button
+                class="carousel-btn"
+                id="nextTestimonial"
+                aria-label="Próximo depoimento"
+              >
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lead" id="contato">
+        <div class="container lead__grid">
+          <div class="lead__intro">
+            <p class="section-kicker section-kicker--light">Vamos conversar</p>
+            <h2 class="lead__title">
+              Pronta para te ajudar a dar o próximo passo.
+            </h2>
+            <p class="lead__text">
+              Preencha o formulário ou fale direto pelo WhatsApp. O retorno
+              costuma ser rápido, geralmente no mesmo dia.
+            </p>
+
+            <div class="lead__contacts">
+              <a
+                href="https://wa.me/5515997238982"
+                class="lead__contact-item"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <span>(15) 99723-8982</span>
+              </a>
+              <a
+                href="mailto:corretoragracielemoraes@creci.org.br"
+                class="lead__contact-item"
+              >
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>corretoragracielemoraes@creci.org.br</span>
+              </a>
+              <a
+                href="https://instagram.com/corretoragracielemoraes"
+                class="lead__contact-item"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span>@corretoragracielemoraes</span>
+              </a>
+              <span class="lead__contact-item lead__contact-item--static">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>Itapeva - SP</span>
+              </span>
+            </div>
+          </div>
+
+          <form class="lead__form" id="leadForm" novalidate>
+            <div class="form-row">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                autocomplete="name"
+                required
+              />
+              <span class="form-error" id="erroNome" role="alert"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="telefone">WhatsApp</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(15) 90000-0000"
+                autocomplete="tel"
+                required
+              />
+              <span class="form-error" id="erroTelefone" role="alert"></span>
+            </div>
+
+            <div class="form-row">
+              <label for="interesse">Tenho interesse em</label>
+              <select id="interesse" name="interesse" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="Comprar um imóvel">Comprar um imóvel</option>
+                <option value="Vender um imóvel">Vender um imóvel</option>
+                <option value="Alugar um imóvel">Alugar um imóvel</option>
+                <option value="Avaliar meu imóvel">Avaliar meu imóvel</option>
+                <option value="Outro assunto">Outro assunto</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="mensagem"
+                >Mensagem <span class="form-optional">(opcional)</span></label
+              >
+              <textarea id="mensagem" name="mensagem" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--whatsapp btn--block btn--lg">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <span>Enviar pelo WhatsApp</span>
+            </button>
+
+            <p class="lead__form-note" id="leadFormNote" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <p class="section-kicker">Dúvidas frequentes</p>
+            <h2 class="section-title">Perguntas que recebo com frequência</h2>
+          </div>
+
+          <div class="faq__list" id="faqList"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a
+            href="#inicio"
+            class="logo logo--footer"
+            aria-label="Graciele Moraes - Página inicial"
+          >
+            <img
+              src="assets/images/logo-clara.png"
+              alt="Graciele Moraes Corretora de Imóveis"
+              class="logo__img"
+              onerror="this.closest('.logo').classList.add('is-placeholder')"
+            />
+            <span class="logo__placeholder" aria-hidden="true">
+              <span class="logo__monogram">GM</span>
+              <span class="logo__text">
+                <span class="logo__name">Graciele Moraes</span>
+                <span class="logo__role">Corretora de Imóveis</span>
+              </span>
+            </span>
+          </a>
+          <p>
+            Conectando pessoas aos melhores lugares para viver e investir, com
+            conhecimento, cuidado e excelência em cada detalhe.
+          </p>
+          <div class="footer__social">
+            <a
+              href="https://instagram.com/corretoragracielemoraes"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://wa.me/5515900000000"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+
+        <nav class="footer__links" aria-label="Links do rodapé">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#imoveis">Imóveis</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__contact">
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> (15)
+              99723-8982
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              corretoragracielemoraes@creci.org.br
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Itapeva - SP
+            </li>
+            <li>
+              <i class="fa-solid fa-id-card" aria-hidden="true"></i> CRECI/SP
+              326640-F
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>
+          &copy; <span id="anoAtual"></span> Graciele Moraes Corretora de
+          Imóveis. Todos os direitos reservados.
+        </p>
+        <nav class="footer__legal" aria-label="Links legais">
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+          <span class="footer__legal-divider" aria-hidden="true">·</span>
+          <a href="#" data-cookie-settings>Gerenciar cookies</a>
+        </nav>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/5515900000000"
+      class="fab-whatsapp"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <button
+      class="back-to-top"
+      id="backToTop"
+      aria-label="Voltar ao topo"
+      hidden
+    >
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="property-modal" id="propertyModal" hidden aria-hidden="true">
+      <div class="property-modal__overlay"></div>
+
+      <div
+        class="property-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="propertyModalTitle"
+      >
+        <button
+          type="button"
+          class="property-modal__close"
+          id="propertyModalClose"
+          aria-label="Fechar"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="property-modal__gallery" id="propertyModalGallery">
+          <div class="property-modal__track" id="propertyModalTrack"></div>
+
+          <button
+            type="button"
+            class="property-modal__nav property-modal__nav--prev"
+            id="propertyModalPrev"
+            aria-label="Foto anterior"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button
+            type="button"
+            class="property-modal__nav property-modal__nav--next"
+            id="propertyModalNext"
+            aria-label="Próxima foto"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+
+          <div class="property-modal__dots" id="propertyModalDots"></div>
+
+          <div class="property-modal__logo" aria-hidden="true">
+            <img
+              src="assets/images/logo-clara.png"
+              alt=""
+              class="property-modal__logo-img"
+            />
+            <span class="property-modal__logo-placeholder"
+              >Coloque sua logo aqui</span
+            >
+          </div>
+        </div>
+
+        <div class="property-modal__body">
+          <p class="property-modal__location" id="propertyModalLocation"></p>
+          <h3 class="property-modal__title" id="propertyModalTitle"></h3>
+          <p class="property-modal__price" id="propertyModalPrice"></p>
+          <div
+            class="property-modal__features"
+            id="propertyModalFeatures"
+          ></div>
+          <p
+            class="property-modal__description"
+            id="propertyModalDescription"
+          ></p>
+          <a
+            class="btn btn--whatsapp btn--block"
+            id="propertyModalCta"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>Tenho interesse</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
