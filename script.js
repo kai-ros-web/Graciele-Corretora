@@ -512,13 +512,13 @@ Aceita financiamento bancário
 `,
     },
     {
-      titulo: "Casa em condomínio fechado",
-      bairro: "Alphaville Itapeva",
+      titulo: "Casa ótima no Itapeva 4",
+      bairro: "Itapeva 4, Itapeva/SP",
       tag: "Venda",
-      preco: "R$ 780.000",
+      preco: "R$ 510.000",
       quartos: 3,
       banheiros: 3,
-      area: "210 m²",
+      area: "104.27 m²",
       foto: "assets/images/imovel-8a.jpg",
       fotos: [
         "assets/images/imovel-8a.jpg",
