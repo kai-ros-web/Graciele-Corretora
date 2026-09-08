@@ -1,0 +1,406 @@
+/* =========================================================
+   Painel administrativo — usa as variáveis definidas em style.css
+   ========================================================= */
+
+.admin-body {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.admin-message {
+  font-size: 0.88rem;
+  min-height: 1.2em;
+  color: var(--color-text-soft);
+}
+.admin-message.is-error {
+  color: #b3423a;
+}
+.admin-message.is-success {
+  color: #4a6b3f;
+}
+
+.admin-link {
+  background: none;
+  border: none;
+  color: var(--color-primary-300);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  padding: 0.4rem 0;
+}
+.admin-link:hover {
+  color: var(--color-primary);
+}
+.admin-link--danger {
+  color: #b3423a;
+}
+
+/* ---------- Login ---------- */
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+.admin-login[hidden] {
+  display: none;
+}
+
+.admin-login__card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.admin-login__monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-text-on-dark);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+.admin-login__monogram--sm {
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.admin-login__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.admin-login__subtitle {
+  font-size: 0.92rem;
+  color: var(--color-text-soft);
+  margin-bottom: var(--space-md);
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: left;
+}
+
+/* ---------- Topbar ---------- */
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.admin-topbar__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.admin-topbar__user {
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+}
+
+.admin-topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ---------- Main ---------- */
+.admin-main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+.admin-main__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.admin-main__title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.admin-main__count {
+  font-size: 0.88rem;
+  color: var(--color-text-soft);
+  margin-top: 0.2rem;
+}
+
+/* ---------- Lista ---------- */
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.admin-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-xs);
+  box-shadow: var(--shadow-soft);
+}
+
+.admin-list-item__photo {
+  flex: none;
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-secondary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-faint);
+  font-size: 1.4rem;
+}
+.admin-list-item__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-list-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-list-item__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0.15rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-list-item__meta {
+  font-size: 0.82rem;
+  color: var(--color-text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-list-item__preco {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-primary-300);
+}
+
+.admin-list-item__actions {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.admin-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.2rem;
+}
+.admin-badge--venda {
+  background: var(--color-highlight-light);
+  color: var(--color-primary-600);
+}
+.admin-badge--locacao {
+  background: var(--color-support-tint);
+  color: var(--color-support);
+}
+
+.admin-empty {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  color: var(--color-text-soft);
+}
+.admin-empty i {
+  font-size: 2rem;
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-xs);
+}
+.admin-empty__hint {
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+}
+
+/* ---------- Formulário de imóvel ---------- */
+.admin-form--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm) var(--space-md);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-soft);
+}
+@media (min-width: 720px) {
+  .admin-form--grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.admin-form__full {
+  grid-column: 1 / -1;
+}
+
+.admin-form__hint {
+  font-size: 0.82rem;
+  color: var(--color-text-faint);
+  margin-top: -0.2rem;
+}
+
+.admin-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap-reverse;
+  border-top: 1px solid var(--color-border-light);
+  padding-top: var(--space-sm);
+}
+
+.admin-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.admin-photo {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin: 0;
+  background: var(--color-secondary-tint);
+}
+.admin-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin-photo__badge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(59, 48, 43, 0.72);
+  color: #fff;
+  font-size: 0.62rem;
+  text-align: center;
+  padding: 0.15rem 0;
+}
+.admin-photo__remove {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: rgba(59, 48, 43, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+.admin-photo__remove:hover {
+  background: #b3423a;
+}
+
+.admin-upload {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary-300);
+  cursor: pointer;
+}
+.admin-upload:hover {
+  border-color: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+/* ---------- Modal (trocar senha) ---------- */
+.admin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+.admin-modal[hidden] {
+  display: none;
+}
+.admin-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 48, 43, 0.55);
+}
+.admin-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}

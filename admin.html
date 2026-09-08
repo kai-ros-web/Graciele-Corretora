@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Imóveis | Graciele Moraes</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#3B302B" />
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <!-- TELA DE LOGIN -->
+    <div class="admin-login" id="adminLogin">
+      <div class="admin-login__card">
+        <span class="admin-login__monogram">GM</span>
+        <h1 class="admin-login__title">Painel de imóveis</h1>
+        <p class="admin-login__subtitle">
+          Acesso restrito. Entre com seu e-mail e senha para gerenciar os
+          imóveis do site.
+        </p>
+
+        <form id="loginForm" class="admin-form" novalidate>
+          <div class="form-row">
+            <label for="loginEmail">E-mail</label>
+            <input
+              type="email"
+              id="loginEmail"
+              name="email"
+              autocomplete="username"
+              required
+            />
+          </div>
+          <div class="form-row">
+            <label for="loginSenha">Senha</label>
+            <input
+              type="password"
+              id="loginSenha"
+              name="senha"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <p class="admin-message" id="loginMessage" role="alert"></p>
+
+          <button type="submit" class="btn btn--primary btn--block btn--lg">
+            <span>Entrar</span>
+          </button>
+
+          <button
+            type="button"
+            class="admin-link"
+            id="forgotPasswordBtn"
+          >
+            Esqueci minha senha
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- PAINEL (visível após login) -->
+    <div class="admin-app" id="adminApp" hidden>
+      <header class="admin-topbar">
+        <div class="admin-topbar__brand">
+          <span class="admin-login__monogram admin-login__monogram--sm"
+            >GM</span
+          >
+          <div>
+            <p class="admin-topbar__title">Painel de imóveis</p>
+            <p class="admin-topbar__user" id="adminUserEmail"></p>
+          </div>
+        </div>
+        <div class="admin-topbar__actions">
+          <button type="button" class="admin-link" id="changePasswordBtn">
+            Trocar senha
+          </button>
+          <button type="button" class="btn btn--outline btn--sm" id="logoutBtn">
+            <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+            <span>Sair</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="admin-main">
+        <!-- LISTA DE IMÓVEIS -->
+        <section id="adminListView">
+          <div class="admin-main__head">
+            <div>
+              <h2 class="admin-main__title">Seus imóveis</h2>
+              <p class="admin-main__count" id="adminCount"></p>
+            </div>
+            <button type="button" class="btn btn--primary" id="newPropertyBtn">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
+              <span>Novo imóvel</span>
+            </button>
+          </div>
+
+          <p class="admin-message" id="listMessage" role="alert"></p>
+
+          <div class="admin-list" id="adminList"></div>
+
+          <div class="admin-empty" id="adminEmpty" hidden>
+            <i class="fa-solid fa-house-circle-exclamation" aria-hidden="true"></i>
+            <p>Nenhum imóvel cadastrado ainda.</p>
+            <p class="admin-empty__hint">
+              Clique em "Novo imóvel" para adicionar o primeiro.
+            </p>
+          </div>
+        </section>
+
+        <!-- FORMULÁRIO (novo / editar) -->
+        <section id="adminFormView" hidden>
+          <div class="admin-main__head">
+            <div>
+              <h2 class="admin-main__title" id="formTitle">Novo imóvel</h2>
+              <p class="admin-main__count">
+                Preencha os dados abaixo e clique em salvar.
+              </p>
+            </div>
+            <button type="button" class="admin-link" id="cancelFormBtn">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              <span>Voltar para a lista</span>
+            </button>
+          </div>
+
+          <form id="propertyForm" class="admin-form admin-form--grid" novalidate>
+            <div class="form-row">
+              <label for="fTitulo">Título</label>
+              <input type="text" id="fTitulo" required />
+            </div>
+
+            <div class="form-row">
+              <label for="fBairro">Localização / bairro</label>
+              <input type="text" id="fBairro" placeholder="Ex.: Centro, Itapeva/SP" />
+            </div>
+
+            <div class="form-row">
+              <label for="fTag">Tipo</label>
+              <select id="fTag" required>
+                <option value="Venda">Venda</option>
+                <option value="Locação">Locação</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="fPreco">Preço</label>
+              <input
+                type="text"
+                id="fPreco"
+                placeholder="Ex.: R$ 350.000 ou A partir de R$ 164.800"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="fQuartos"
+                >Quartos <span class="form-optional">(opcional)</span></label
+              >
+              <input type="number" id="fQuartos" min="0" />
+            </div>
+
+            <div class="form-row">
+              <label for="fBanheiros"
+                >Banheiros <span class="form-optional">(opcional)</span></label
+              >
+              <input type="number" id="fBanheiros" min="0" />
+            </div>
+
+            <div class="form-row">
+              <label for="fArea">Área</label>
+              <input type="text" id="fArea" placeholder="Ex.: 150 m²" required />
+            </div>
+
+            <div class="form-row admin-form__full">
+              <label for="fDescricao">Descrição</label>
+              <textarea id="fDescricao" rows="8"></textarea>
+            </div>
+
+            <div class="form-row admin-form__full">
+              <label>Fotos</label>
+              <p class="admin-form__hint">
+                A primeira foto da lista é usada como capa do imóvel.
+              </p>
+
+              <div class="admin-photos" id="adminPhotos"></div>
+
+              <label class="admin-upload" for="fFotos">
+                <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+                <span>Adicionar fotos</span>
+                <input
+                  type="file"
+                  id="fFotos"
+                  accept="image/*"
+                  multiple
+                  hidden
+                />
+              </label>
+            </div>
+
+            <p class="admin-message admin-form__full" id="formMessage" role="alert"></p>
+
+            <div class="admin-form__actions admin-form__full">
+              <button
+                type="button"
+                class="btn btn--outline"
+                id="deletePropertyBtn"
+                hidden
+              >
+                <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                <span>Excluir imóvel</span>
+              </button>
+              <button type="submit" class="btn btn--primary btn--lg" id="savePropertyBtn">
+                <span>Salvar imóvel</span>
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal simples para trocar a senha -->
+    <div class="admin-modal" id="passwordModal" hidden>
+      <div class="admin-modal__overlay" data-close-modal></div>
+      <div class="admin-modal__dialog" role="dialog" aria-modal="true">
+        <button
+          type="button"
+          class="property-modal__close"
+          data-close-modal
+          id="passwordModalClose"
+          aria-label="Fechar"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <h3 class="admin-main__title" id="passwordModalTitle">Trocar senha</h3>
+        <p class="admin-form__hint" id="passwordModalSubtitle" hidden>
+          Você abriu um link de redefinição de senha. Defina abaixo a nova
+          senha para continuar.
+        </p>
+        <form id="passwordForm" class="admin-form">
+          <div class="form-row">
+            <label for="newPassword">Nova senha</label>
+            <input
+              type="password"
+              id="newPassword"
+              minlength="6"
+              autocomplete="new-password"
+              required
+            />
+          </div>
+          <p class="admin-message" id="passwordMessage" role="alert"></p>
+          <button type="submit" class="btn btn--primary btn--block">
+            <span>Salvar nova senha</span>
+          </button>
+          <button
+            type="button"
+            class="admin-link"
+            id="passwordModalCancel"
+            hidden
+          >
+            Cancelar e voltar para o login
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
